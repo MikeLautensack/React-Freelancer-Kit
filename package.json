@@ -1,16 +1,23 @@
 {
-  "name": "react-freelancer-kit",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@mikelautensack/react-freelancer-kit",
+  "version": "0.0.15",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "dist/main.ts",
-  "types": "dist/main.d.ts",
+  "main": "./dist/react-freelancer-kit.umd.cjs",
+  "module": "./dist/react-freelancer-kit.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/react-freelancer-kit.js",
+      "require": "./dist/react-freelancer-kit.umd.cjs",
+      "types": "./dist/main.d.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

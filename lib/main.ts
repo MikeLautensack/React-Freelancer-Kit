@@ -1,7 +1,1 @@
-import HelloWorld from "./Components/HelloWorld";
-
-export { HelloWorld };
-
-export function helloAnything(thing: string): string {
-  return `Hello ${thing}!`;
-}
+export { default as HelloWorld } from "./Components/HelloWorld";
